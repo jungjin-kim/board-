@@ -28,12 +28,12 @@
 				<tr><th colspan="4">--------작성된 글이 없습니다---------</th></tr>
 			</c:when>
 			<c:otherwise>
-				<c:forEach items="${list }" var="dto">
+				<c:forEach items="${list }" var="vo">
 					<tr>
-						<td>${dto.myno }</td>
-						<td>${dto.myname }</td>
-						<td><a href="select.do?myno=${dto.myno}">${dto.mytitle }</a></td>
-						<td>${dto.sysdate }</td>
+						<td>${vo.myno }</td>
+						<td>${vo.myname }</td>
+						<td><a href="select.do?myno=${vo.myno}">${vo.mytitle }</a></td>
+						<td>${vo.sysdate }</td>
 					</tr>
 				</c:forEach>
 			</c:otherwise>

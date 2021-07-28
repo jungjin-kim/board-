@@ -18,6 +18,12 @@ public class BoardController {
 		model.addAttribute("list", service.selectList());
 		return "list";
 	}
+	
+	@RequestMapping("/select.do")
+	public String selectOne(Model model, int myno) {
+		model.addAttribute("vo", service.selectOne(myno));
+		return "boardselect";
+	}
 
 	
 }
