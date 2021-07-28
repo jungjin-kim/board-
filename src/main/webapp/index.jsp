@@ -9,6 +9,8 @@
 <body>
 
 <a href="home.do">home</a>
+<br/>
+<a href="list.do">list</a>
 
 </body>
 </html>
