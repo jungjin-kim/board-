@@ -31,12 +31,12 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int update(BoardVo vo) {
-		return 0;
+		return dao.update(vo);
 	}
 
 	@Override
 	public int delete(int myno) {
-		return 0;
+		return dao.delete(myno);
 	}
 
 }

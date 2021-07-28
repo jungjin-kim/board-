@@ -38,4 +38,26 @@ public class BoardController {
 		}
 		return "redirect:insertform.do";
 	}
+	
+	@RequestMapping("/updateform.do")
+	public String updateForm(Model model, int myno) {
+		model.addAttribute("vo", service.selectOne(myno));
+		return "boardupdate";
+	}
+	
+	@RequestMapping("/updateres.do")
+	public String updateRes(BoardVo vo) {
+		if (service.update(vo) > 0) {
+			return "redirect:select.do?myno="+vo.getMyno();
+		}
+		return "redirect:updateform.do?myno="+vo.getMyno();
+	}
+	
+	@RequestMapping("/delete.do")
+	public String delete(int myno) {
+		if (service.delete(myno) > 0) {
+			return "redirect:list.do";
+		}
+		return "redirect:select.do?myno=" + myno;
+	}
 }
