@@ -26,7 +26,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int insert(BoardVo vo) {
-		return 0;
+		return dao.insert(vo);
 	}
 
 	@Override
