@@ -41,6 +41,9 @@ public class HomeController {
 
 		System.out.println("!!!!!!");
 		System.out.println("병합할꺼야");
+		
+		
+		System.out.println("깃에서 수정");
 
 		return "home";
 		
