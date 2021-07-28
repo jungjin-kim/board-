@@ -39,9 +39,9 @@ public class HomeController {
 
 		System.out.println("너무 어려운거 아니니?");
 
-
 		System.out.println("!!!!!!");
 		System.out.println("병합할꺼야");
+
 		return "home";
 		
 	}
