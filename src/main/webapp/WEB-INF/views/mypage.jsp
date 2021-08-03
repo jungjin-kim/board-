@@ -9,7 +9,8 @@
 <body>
 
 	<h1>MYPAGE</h1>
-	
+	${memberid }
+	${membername }
 	
 </body>
 </html>
