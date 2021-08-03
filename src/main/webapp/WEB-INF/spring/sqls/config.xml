@@ -4,11 +4,13 @@
 
 	<typeAliases>
 		<typeAlias type="com.my.hello.vo.BoardVo" alias="BoardVo"/>
+		<typeAlias type="com.my.hello.vo.MemberVo" alias="MemberVo"/>
 	</typeAliases>
 	
 	<!-- resource : src/main/resources와 연결됨 -->
 	<mappers>
 		<mapper resource="/mybatis/board-mapper.xml"/>
+		<mapper resource="/mybatis/member-mapper.xml" />
 	</mappers>
 	
 </configuration>

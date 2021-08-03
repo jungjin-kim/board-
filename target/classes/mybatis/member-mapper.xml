@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="member">
+
+	<select id="login" parameterType="memberVo" resultType="memberVo">
+		SELECT MEMBERNO, MEMBERID, MEMBERPW, MEMBERNAME
+		FROM TEST.MEMBER
+		WHERE MEMBERID =  #{memberid}
+		AND MEMBERPW = #{memberpw}
+	</select>
+	
+	<select id="mypage" parameterType="memberVo" resultType="memberVo">
+		SELECT MEMBERNO, MEMBERID, MEMBERPW, MEMBERNAME
+		FROM TEST.MEMBER
+		WHERE MEMBERID =  #{memberid}
+	</select>
+		
+	<insert id="register" parameterType="MemberVo">
+		INSERT INTO TEST.MEMBER
+		VALUES(MEMBERNO, #{memberid}, #{memberpw}, #{membername})
+	</insert>
+	
+	<update id="memberupdate" parameterType="MemberVo">
+		UPDATE TEST.MEMBER
+		SET MEMBERPW = #{memberpw}, MEMBERNAME = #{membername}
+		WHERE MEMBERNO = #{memberno}
+	</update>
+	
+	<delete id="memberdelete" parameterType="int">
+		DELETE FROM TEST.MEMBER WHERE MEMBERNO = #{memberno}
+	</delete>
+
+</mapper>

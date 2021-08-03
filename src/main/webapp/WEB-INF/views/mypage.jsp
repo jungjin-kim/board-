@@ -8,12 +8,8 @@
 </head>
 <body>
 
-<a href="home.do">home</a>
-<br/>
-
- 
-<a href="loginform.do">로그인</a>
-<br/>
-<a href="register.do">회원가입</a>
+	<h1>MYPAGE</h1>
+	
+	
 </body>
 </html>

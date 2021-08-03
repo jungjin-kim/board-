@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<h1>LISt</h1>
+	<h1>LIST</h1>
 	<table border="1">
 		<col width="50" />
 		<col width="100" />
