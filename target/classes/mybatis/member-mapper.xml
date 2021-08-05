@@ -2,14 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="member">
 
-	<select id="login" parameterType="memberVo" resultType="memberVo">
+	<select id="login" parameterType="MemberVo" resultType="MemberVo">
 		SELECT MEMBERNO, MEMBERID, MEMBERPW, MEMBERNAME
 		FROM TEST.MEMBER
 		WHERE MEMBERID =  #{memberid}
 		AND MEMBERPW = #{memberpw}
 	</select>
 	
-	<select id="mypage" parameterType="memberVo" resultType="memberVo">
+	<select id="mypage" parameterType="int" resultType="MemberVo">
+		SELECT MEMBERNO, MEMBERID, MEMBERPW, MEMBERNAME
+		FROM TEST.MEMBER
+		WHERE MEMBERNO =  #{memberno}
+	</select>
+	
+	<select id="res" parameterType="String" resultType="MemberVo">
 		SELECT MEMBERNO, MEMBERID, MEMBERPW, MEMBERNAME
 		FROM TEST.MEMBER
 		WHERE MEMBERID =  #{memberid}

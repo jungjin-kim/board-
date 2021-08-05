@@ -37,7 +37,7 @@
 				dataType:"json",
 				success: function(msg){
 					if (msg.check == true) {
-						location.href="member.do";
+						location.href="member.do?memberid=" + memberid;
 					} else {
 						$("#loginChk").show();
 						$("#loginChk").html("ID 혹은 PW를 다시 확인해주세요!");

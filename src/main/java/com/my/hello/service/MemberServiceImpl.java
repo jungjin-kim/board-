@@ -37,4 +37,9 @@ public class MemberServiceImpl implements MemberService {
 		return dao.mypage(memberno);
 	}
 
+	@Override
+	public MemberVo res(String memberid) {
+		return dao.res(memberid);
+	}
+
 }

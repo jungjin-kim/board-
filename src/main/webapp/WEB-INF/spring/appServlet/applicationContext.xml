@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		<!-- db.properties에서 가지고오기 -->
+	<!-- db.properties에서 가지고오기 -->
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		
 		<!-- classpath : src/main/resources/ 연결해줌! -->

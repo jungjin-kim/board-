@@ -60,7 +60,18 @@ public class MemberDaoImpl implements MemberDao {
 	public MemberVo mypage(int memberno) {
 		MemberVo vo = null;
 		try {
-			vo = sqlSession.selectOne(NAMESPACE + "mypage", vo);
+			vo = sqlSession.selectOne(NAMESPACE + "mypage", memberno);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return vo;
+	}
+
+	@Override
+	public MemberVo res(String memberid) {
+		MemberVo vo = null;
+		try {
+			vo = sqlSession.selectOne(NAMESPACE + "res", memberid);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
